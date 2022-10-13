@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, defineEmits } from "vue"
+import { computed, ref } from "vue"
 
 const props = defineProps({
   totalElement: {
@@ -63,7 +63,7 @@ const onPageSelect = (pageNo: number) => {
 
 const range = (start: number, end: number) => {
   return Array(end - start + 1)
-    .fill()
+    .fill(undefined)
     .map((_, idx) => start + idx)
 }
 </script>
