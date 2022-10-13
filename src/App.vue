@@ -4,7 +4,7 @@ import Paginate from "./components/paginate.vue"
 
 <template>
   <div>
-    <Paginate />
+    <Paginate :totalElement="100" :elementPerPage="10" />
   </div>
 </template>
 
