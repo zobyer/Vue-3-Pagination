@@ -1,16 +1,71 @@
-# Vue 3 + TypeScript + Vite
+# Vue-3 Pagination
+Simple pagination component for vue-3
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+    - [NPM](#npm)
+- [Usage](#usage)
+- [Api](#api)
+    - [Props](#props)
+    - [Events](#events)
+- [Development](#development)
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+# Dependencies
+* Vue.js (3.2.37). Required.
 
-## Type Support For `.vue` Imports in TS
+# Installation
+## NPM
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+    npm install vue-3-pagination
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+import the script:
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+    import { v3Paginate } from "vue-3-pagination";
+    
+import the css: 
+
+    import "vue-3-pagination/dist/style.css";
+
+# Usage
+Register the component :
+
+```js
+components: {
+  v3Paginate
+}
+```
+
+```vue
+<v3Paginate :totalElement="100" :elementPerPage="10"  @onPageClick="getData"/>
+```
+
+# Api
+
+## Props
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `totalElement` | Number | (optional) defines total no of data present. |
+| `elementPerPage` | Number | (optional) defines number data which will be shown on per page. |
+
+### Events
+
+| Name | Description |
+| --- | --- |
+| `onPageClick` | Triggered when a user changes page. Passes the new `page` index as a parameter. |
+
+
+# Development
+
+To work on the library locally, run the following command:
+
+install dependencies
+```bash
+npm i
+```
+run on local machine
+```bash
+npm run dev
+```
+
