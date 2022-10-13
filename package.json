@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://github.com/zobyer/Vue-3-Pagination/tree/gen-package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zobyer/Vue-3-Pagination/tree/gen-package.git"
+  },
   "files": [
     "dist"
   ],
