@@ -1,18 +1,18 @@
 {
   "name": "vue-3-pagination",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-component-npm-example.umd.cjs",
-  "module": "./dist/vue-component-npm-example.js",
+  "main": "./dist/vue-3-paginate-component.umd.cjs",
+  "module": "./dist/vue-3-paginate-component.js",
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue-component-npm-example.js",
-      "require": "./dist/vue-component-npm-example.umd.js"
+      "import": "./dist/vue-3-paginate-component.js",
+      "require": "./dist/vue-3-paginate-component.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },

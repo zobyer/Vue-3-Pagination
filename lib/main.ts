@@ -1,2 +1,2 @@
-import pagination from "../src/components/paginate.vue"
-export { pagination }
+import v3Paginate from "../src/components/paginate.vue";
+export { v3Paginate };
