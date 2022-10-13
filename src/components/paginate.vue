@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue"
+import { computed, ref, defineEmits } from "vue"
 
 const props = defineProps({
   totalElement: {
@@ -11,6 +11,7 @@ const props = defineProps({
     default: 1,
   },
 })
+const emit = defineEmits(["onPageClick"])
 
 let selectedPage = ref(1)
 let firstPageCount = ref(1)
@@ -50,13 +51,6 @@ const getPaginationList = () => {
     middlePageCountStart.value = -1
     middlePageCountEnd.value = -2
   }
-
-  console.log(
-    "first page count ",
-    firstPageCount.value,
-    "last page count ",
-    lastPageCount.value
-  )
 }
 getPaginationList()
 
@@ -64,6 +58,7 @@ const onPageSelect = (pageNo: number) => {
   if (pageNo > totalPageCount.value || pageNo < 1) return
   selectedPage.value = pageNo
   getPaginationList()
+  emit("onPageClick", pageNo)
 }
 
 const range = (start: number, end: number) => {
