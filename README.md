@@ -19,7 +19,7 @@ Simple pagination component for vue-3
 
 ## NPM
 
-    npm install vue-3-pagination
+    npm install @ahm-zobyer/vue-3-pagination
 
 import the script:
 
